@@ -70,14 +70,14 @@ const HeroSection = () => {
             initial={{ opacity: 0, y: 10 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.5 }}
-            className="font-bold text-sm md:text-base tracking-widest uppercase mb-4 inline-block"
+            className="font-bold text-lg md:text-2xl tracking-widest uppercase mb-4 inline-block"
             style={{
               background: "linear-gradient(135deg, #ea580c 0%, #fb923c 100%)",
               WebkitBackgroundClip: "text",
               WebkitTextFillColor: "transparent",
             }}
           >
-          One Institute · One Course
+            One Institute · One Course
           </motion.p>
           <br />
           {/* Line 1 */}
@@ -156,7 +156,7 @@ const HeroSection = () => {
           initial={{ opacity: 0, y: 24 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.75, delay: 0.45 }}
-          className="flex flex-wrap justify-center gap-x-14 gap-y-6"
+          className="flex flex-wrap justify-center gap-x-6 sm:gap-x-14 gap-y-6"
         >
           {stats.map((stat, i) => (
             <motion.div

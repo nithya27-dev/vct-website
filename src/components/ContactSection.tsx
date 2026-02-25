@@ -55,12 +55,12 @@ const ContactSection = () => {
                 </div>
 
                 <div className="flex items-start gap-4">
-                  <div className="w-12 h-12 rounded-xl bg-primary/10 flex items-center justify-center">
+                  <div className="w-12 h-12 flex-shrink-0 rounded-xl bg-primary/10 flex items-center justify-center">
                     <Mail className="w-5 h-5 text-primary" />
                   </div>
-                  <div>
+                  <div className="min-w-0">
                     <p className="text-xs text-muted-foreground">Email</p>
-                    <p className="font-semibold text-foreground">
+                    <p className="font-semibold text-foreground break-all">
                       training@vaarahicloudtechnologies.com
                     </p>
                   </div>

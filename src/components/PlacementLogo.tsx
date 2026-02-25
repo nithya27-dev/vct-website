@@ -20,10 +20,20 @@ const PlacementLogos = () => (
         Top Companies Where Our Students Are Placed
       </p>
     </div>
-    <div className="relative">
+    <div className="relative overflow-hidden">
+      {/* Left fade mask */}
+      <div
+        className="absolute left-0 top-0 bottom-0 z-10 pointer-events-none"
+        style={{ width: 60, background: "linear-gradient(to right, hsl(var(--background)), transparent)" }}
+      />
+      {/* Right fade mask */}
+      <div
+        className="absolute right-0 top-0 bottom-0 z-10 pointer-events-none"
+        style={{ width: 60, background: "linear-gradient(to left, hsl(var(--background)), transparent)" }}
+      />
       <div className="flex animate-marquee">
         {[...logos, ...logos].map((logo, i) => (
-          <div key={i} className="flex-shrink-0 mx-8 flex flex-col items-center justify-center h-20 w-24">
+          <div key={i} className="flex-shrink-0 mx-6 flex flex-col items-center justify-center h-20 w-24">
             <img
               src={logo.url}
               alt={logo.name}

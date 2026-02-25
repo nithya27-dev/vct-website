@@ -55,12 +55,12 @@ const TestimonialsSection = () => {
   }, []);
 
   return (
-    <section id="testimonials" className="py-24 bg-background">
+    <section id="testimonials" className="py-12 sm:py-24 bg-background">
       <div className="section-container">
         <div className="max-w-4xl mx-auto">
-          <div className="bg-white/90 dark:bg-zinc-900/80 rounded-2xl shadow-xl border border-border p-6 sm:p-12">
+          <div className="bg-white/90 dark:bg-zinc-900/80 rounded-2xl shadow-xl border border-border p-4 sm:p-10">
 
-            <div className="text-center max-w-3xl mx-auto mb-16">
+            <div className="text-center max-w-3xl mx-auto mb-6 sm:mb-16">
               <span className="text-primary text-sm font-semibold uppercase tracking-widest">
                 Testimonials
               </span>
@@ -70,9 +70,9 @@ const TestimonialsSection = () => {
             </div>
 
             <div className="relative max-w-3xl mx-auto overflow-hidden">
-              <div className="glass-card p-8 sm:p-12 relative">
+              <div className="glass-card p-5 sm:p-10 relative">
 
-                <Quote className="w-12 h-12 text-primary/20 absolute top-6 left-6" />
+                <Quote className="w-8 h-8 sm:w-12 sm:h-12 text-primary/20 absolute top-6 left-6" />
 
                 <AnimatePresence custom={direction} mode="wait">
                   <motion.div
@@ -88,7 +88,7 @@ const TestimonialsSection = () => {
                     }}
                     className="text-center"
                   >
-                    <p className="text-lg sm:text-xl text-foreground leading-relaxed mb-8 italic">
+                    <p className="text-lg sm:text-xl text-foreground leading-relaxed mb-4 sm:mb-8 italic">
                       "{testimonials[current].text}"
                     </p>
 
@@ -125,11 +125,10 @@ const TestimonialsSection = () => {
                         onClick={() =>
                           setCurrent([i, i > current ? 1 : -1])
                         }
-                        className={`w-2.5 h-2.5 rounded-full transition-all ${
-                          i === current
-                            ? "bg-primary w-6"
-                            : "bg-muted-foreground/30"
-                        }`}
+                        className={`w-2.5 h-2.5 rounded-full transition-all ${i === current
+                          ? "bg-primary w-6"
+                          : "bg-muted-foreground/30"
+                          }`}
                       />
                     ))}
                   </div>
