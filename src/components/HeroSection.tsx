@@ -1,119 +1,203 @@
 import { motion } from "framer-motion";
-import { ChevronDown } from "lucide-react";
-import heroBg from "@/assets/hero-bg.jpg";
+import { ChevronDown, ArrowRight } from "lucide-react";
+import image from "@/assets/image.png";
 
 const stats = [
-  { value: "830+", label: "Students Placed" },
+  { value: "840+", label: "Students Placed" },
   { value: "47+", label: "Batches Completed" },
   { value: "79%", label: "Success Rate" },
-  { value: "21+", label: "Years IT Experience" },
-  { value: "13+", label: "Years Training Experience" },
+  { value: "21+", label: "IT Experience" },
+  { value: "12+", label: "Teaching Experience" },
+
 ];
 
 const FORM_LINK =
   "https://docs.google.com/forms/d/e/1FAIpQLSeasmTZ3wOn0aMDz-A6fFGVKu-U2rac4qPAdkAaPrclJj7z3w/viewform";
 
 const HeroSection = () => {
-  const scrollTo = (id: string) => {
+  const scrollTo = (id: string) =>
     document.getElementById(id)?.scrollIntoView({ behavior: "smooth" });
-  };
 
   return (
     <section
       id="home"
-      className="relative min-h-screen flex items-center justify-center overflow-hidden"
+      className="relative min-h-screen flex flex-col justify-center overflow-hidden"
+      style={{ backgroundColor: "#0b1525" }}
     >
-      {/* Background Image */}
+      {/* ── Background tech-network image ── */}
       <div
-        className="absolute inset-0 bg-cover bg-center"
-        style={{ backgroundImage: `url(${heroBg})` }}
+        className="absolute inset-0 bg-cover bg-center bg-no-repeat"
+        style={{ backgroundImage: `url(${image})`, opacity: 0.75 }}
       />
-      <div className="absolute inset-0 bg-hero-overlay/85" />
 
-      {/* Main Content */}
-      <div className="relative z-10 container mx-auto px-4 text-center pt-28">
-        <motion.div
-          initial={{ opacity: 0, y: 40 }}
+      {/* ── Center dark overlay ── */}
+      <div
+        className="absolute inset-0"
+        style={{
+          background: "rgba(11,21,37,0.72)",
+        }}
+      />
+
+      {/* ── Subtle orange glow centred behind headline ── */}
+      <div
+        className="absolute pointer-events-none"
+        style={{
+          top: "40%",
+          left: "50%",
+          width: 700,
+          height: 320,
+          background:
+            "radial-gradient(ellipse, rgba(249,115,22,0.14) 0%, transparent 68%)",
+          filter: "blur(56px)",
+          transform: "translate(-50%, -50%)",
+        }}
+      />
+
+      {/* ══════════════ MAIN CONTENT ══════════════ */}
+      <div className="relative z-10 w-full max-w-4xl mx-auto px-6 md:px-12 pt-28 pb-10 text-center">
+
+
+
+        {/* ── Headline ── */}
+        <motion.h1
+          initial={{ opacity: 0, y: 28 }}
           animate={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.8 }}
+          transition={{ duration: 0.7, delay: 0.1 }}
+          className="font-heading font-bold leading-[1.08] mb-6"
+          style={{ fontSize: "clamp(2.8rem, 5.5vw, 4.8rem)" }}
         >
-          <p className="text-accent font-semibold text-sm md:text-base tracking-widest uppercase mb-4">
-            One Institute · One Course
-          </p>
+          <motion.p
+            initial={{ opacity: 0, y: 10 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.5 }}
+            className="font-bold text-sm md:text-base tracking-widest uppercase mb-4 inline-block"
+            style={{
+              background: "linear-gradient(135deg, #ea580c 0%, #fb923c 100%)",
+              WebkitBackgroundClip: "text",
+              WebkitTextFillColor: "transparent",
+            }}
+          >
+          One Institute · One Course
+          </motion.p>
+          <br />
+          {/* Line 1 */}
+          <span style={{ color: "#ffffff" }}>VAARAHI CLOUD&nbsp;</span>
+          <br />
+          <span style={{ color: "#eeeae7ff" }}>TECHNOLOGIES</span>
+        </motion.h1>
 
-          <h1 className="text-4xl md:text-6xl lg:text-7xl font-heading font-bold text-primary-foreground mb-6 leading-tight">
-            VAARAHI CLOUD
-            <br />
-            <span className="text-gradient">TECHNOLOGIES</span>
-          </h1>
+        {/* ── Subheading ── */}
+        <motion.p
+          initial={{ opacity: 0, y: 20 }}
+          animate={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.7, delay: 0.2 }}
+          className="text-base md:text-lg leading-relaxed mb-9 mx-auto"
+          style={{ color: "rgba(255,255,255,0.72)", maxWidth: 560 }}
+        >
+          Hyderabad's Best Data Engineering Institute. Transform your career with India's most trusted, results-driven training ecosystem.
+        </motion.p>
 
-          <p className="text-lg md:text-xl text-primary-foreground/80 max-w-2xl mx-auto mb-4">
-            GCP Data Engineering — 100% Job Ready Program
-          </p>
+        {/* ── CTA Buttons ── */}
+        <motion.div
+          initial={{ opacity: 0, y: 20 }}
+          animate={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.7, delay: 0.3 }}
+          className="flex flex-wrap items-center justify-center gap-4 mb-16"
+        >
+          {/* Enroll Now — filled orange */}
+          <a
+            href={FORM_LINK}
+            target="_blank"
+            rel="noopener noreferrer"
+            className="inline-flex items-center gap-2 font-semibold text-base text-white rounded-lg px-8 py-3.5 transition-all duration-200 hover:brightness-110 hover:scale-[1.02]"
+            style={{
+              background: "linear-gradient(135deg, #ea580c 0%, #fb923c 100%)",
+              boxShadow: "0 4px 24px rgba(249,115,22,0.45)",
+            }}
+          >
+            Enroll Now
+            <ArrowRight className="w-4 h-4" />
+          </a>
 
-          <p className="text-sm md:text-base text-primary-foreground/60 max-w-xl mx-auto mb-8">
-            Hyderabad's No.1 GCP Data Engineering Institute. Empower your career
-            with India's most trusted, results-driven training ecosystem.
-          </p>
-
-          {/* Buttons */}
-          <div className="flex flex-col sm:flex-row items-center justify-center gap-4 mb-16">
-            <a
-              href={FORM_LINK}
-              target="_blank"
-              rel="noopener noreferrer"
-              className="bg-primary text-primary-foreground px-8 py-3.5 rounded-lg font-semibold text-base hover:opacity-90 transition-opacity shadow-lg shadow-primary/30"
+          {/* WhatsApp Us — dark outlined */}
+          <a
+            href="https://wa.me/917893337796"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="inline-flex items-center gap-2 font-semibold text-base rounded-lg px-8 py-3.5 transition-all duration-200 hover:bg-white/10"
+            style={{
+              border: "1.5px solid rgba(255,255,255,0.28)",
+              color: "rgba(255,255,255,0.88)",
+              background: "rgba(255,255,255,0.04)",
+            }}
+          >
+            {/* WhatsApp logo */}
+            <svg
+              viewBox="0 0 32 32"
+              className="w-5 h-5"
+              fill="none"
+              xmlns="http://www.w3.org/2000/svg"
             >
-              Enroll Now
-            </a>
-
-            <a
-              href="https://wa.me/917893337796"
-              target="_blank"
-              rel="noopener noreferrer"
-              className="bg-green-600 text-white px-8 py-3.5 rounded-lg font-semibold text-base flex items-center gap-2 hover:bg-green-700 transition-colors shadow-lg shadow-green-600/20"
-            >
-              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 32 32" className="w-5 h-5" fill="currentColor">
-                <path d="M16 3C9.373 3 4 8.373 4 15c0 2.385.832 4.584 2.236 6.418L4 29l7.824-2.05A12.93 12.93 0 0 0 16 27c6.627 0 12-5.373 12-12S22.627 3 16 3zm0 22c-1.97 0-3.885-.51-5.56-1.477l-.396-.23-4.646 1.217 1.24-4.522-.258-.414A9.94 9.94 0 0 1 6 15c0-5.514 4.486-10 10-10s10 4.486 10 10-4.486 10-10 10zm5.273-7.273c-.29-.145-1.715-.848-1.98-.945-.266-.097-.46-.145-.655.146-.195.29-.75.945-.92 1.14-.17.195-.34.22-.63.073-.29-.145-1.225-.452-2.334-1.44-.863-.77-1.445-1.72-1.615-2.01-.17-.29-.018-.447.127-.592.13-.13.29-.34.435-.51.145-.17.193-.29.29-.485.097-.195.048-.365-.024-.51-.073-.145-.655-1.584-.897-2.17-.237-.57-.48-.492-.655-.5l-.56-.01c-.194 0-.51.073-.777.365-.266.29-1.02.997-1.02 2.43 0 1.432 1.04 2.81 1.185 3.005.145.195 2.05 3.13 5.07 4.27.709.306 1.262.488 1.694.624.712.227 1.36.195 1.872.118.571-.085 1.715-.7 1.957-1.376.242-.677.242-1.257.17-1.376-.073-.12-.266-.193-.555-.338z"/>
-              </svg>
-              Chat with us on WhatsApp
-            </a>
-          </div>
+              <path
+                d="M16 2C8.268 2 2 8.268 2 16c0 2.494.65 4.835 1.788 6.865L2 30l7.347-1.766A13.94 13.94 0 0 0 16 30c7.732 0 14-6.268 14-14S23.732 2 16 2Z"
+                fill="#25D366"
+              />
+              <path
+                d="M23.07 19.44c-.32-.16-1.9-.937-2.194-1.044-.294-.107-.508-.16-.722.16-.213.32-.828 1.044-.015 1.258.294.107 1.01.267 1.928 1.176.72.71 1.206 1.59 1.347 1.856.14.267-.015.427-.16.587-.32.32-.64.427-.96.587-.32.16-.534.107-.748-.054-.213-.16-.8-.96-1.014-1.12-.213-.16-.427-.213-.64-.054-.214.16-1.814 1.014-2.028 1.12-.213.107-.427.107-.694-.054-.32-.213-1.28-.96-2.455-2.135a9.63 9.63 0 0 1-1.92-2.988c-.213-.587-.054-.907.16-1.12.213-.213.427-.32.694-.48.267-.16.32-.267.48-.48.16-.213.054-.427-.054-.587-.107-.16-1.014-2.455-1.387-3.362-.374-.907-.748-.748-.96-.748h-.694c-.213 0-.587.054-.907.427-.32.374-1.227 1.2-1.227 2.935 0 1.74 1.28 3.415 1.44 3.628.16.214 2.508 3.842 6.082 5.39.85.374 1.52.587 2.028.747.854.267 1.628.24 2.24.16.694-.107 2.135-.855 2.455-1.696.32-.854.32-1.6.213-1.76-.107-.16-.32-.267-.64-.427Z"
+                fill="#fff"
+              />
+            </svg>
+            WhatsApp Us
+          </a>
         </motion.div>
 
-        {/* Stats Section - Single Row */}
+        {/* ── Stats row ── */}
         <motion.div
-          initial={{ opacity: 0, y: 30 }}
+          initial={{ opacity: 0, y: 24 }}
           animate={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.8, delay: 0.3 }}
-          className="flex justify-center items-center gap-6 flex-nowrap overflow-x-auto max-w-6xl mx-auto mb-12 px-4"
+          transition={{ duration: 0.75, delay: 0.45 }}
+          className="flex flex-wrap justify-center gap-x-14 gap-y-6"
         >
-          {stats.map((stat) => (
-            <div
+          {stats.map((stat, i) => (
+            <motion.div
               key={stat.label}
-              className="glass rounded-xl px-6 py-5 backdrop-blur-md min-w-[190px] text-center"
+              initial={{ opacity: 0, y: 16 }}
+              animate={{ opacity: 1, y: 0 }}
+              transition={{ delay: 0.5 + i * 0.08 }}
+              className="flex flex-col"
             >
-              <div className="text-2xl md:text-3xl font-heading font-bold text-blue-600">
+              <span
+                className="font-heading font-bold leading-none"
+                style={{ fontSize: "clamp(2rem, 3.5vw, 2.8rem)", color: "#fb923c" }}
+              >
                 {stat.value}
-              </div>
-              <div className="text-xs md:text-sm text-blue-400 mt-1">
+              </span>
+              <span
+                className="text-sm mt-1 font-medium"
+                style={{ color: "rgba(255,255,255,0.50)" }}
+              >
                 {stat.label}
-              </div>
-            </div>
+              </span>
+            </motion.div>
           ))}
         </motion.div>
-
-        {/* Scroll Down Icon */}
-        <motion.button
-          onClick={() => scrollTo("about")}
-          initial={{ opacity: 0 }}
-          animate={{ opacity: 1, y: [0, 8, 0] }}
-          transition={{ delay: 1, y: { repeat: Infinity, duration: 1.5 } }}
-          className="text-primary-foreground/50"
-        >
-          <ChevronDown size={32} />
-        </motion.button>
       </div>
+
+      {/* ── Scroll Down Chevron ── */}
+      <motion.button
+        onClick={() => scrollTo("about")}
+        initial={{ opacity: 0 }}
+        animate={{ opacity: 1, y: [0, 8, 0] }}
+        transition={{
+          opacity: { delay: 1.2, duration: 0.5 },
+          y: { delay: 1.2, repeat: Infinity, duration: 1.6, ease: "easeInOut" },
+        }}
+        className="absolute bottom-8 left-1/2 -translate-x-1/2 z-10"
+        style={{ color: "rgba(255,255,255,0.38)" }}
+        aria-label="Scroll down"
+      >
+        <ChevronDown size={34} />
+      </motion.button>
     </section>
   );
 };
