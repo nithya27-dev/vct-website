@@ -18,8 +18,14 @@ const DEMO_LINK =
   "https://us06web.zoom.us/meeting/register/eZQMjATjT7aDPLL_4imTHA";
 
 const HeroSection = () => {
-  const scrollTo = (id: string) =>
-    document.getElementById(id)?.scrollIntoView({ behavior: "smooth" });
+  const scrollTo = (id: string) => {
+    const el = document.getElementById(id);
+    if (el) {
+      const headerHeight = document.querySelector("header")?.offsetHeight ?? 64;
+      const top = el.getBoundingClientRect().top + window.scrollY - headerHeight;
+      window.scrollTo({ top, behavior: "smooth" });
+    }
+  };
 
   return (
     <section

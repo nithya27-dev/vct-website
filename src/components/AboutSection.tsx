@@ -18,7 +18,7 @@ const AboutSection = () => {
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
           transition={{ duration: 0.6 }}
-          className="text-center mb-16"
+          className="text-center mb-8 md:mb-16"
         >
           <p className="text-primary font-semibold text-sm tracking-widest uppercase mb-2">About Us</p>
           <h2 className="text-3xl md:text-5xl font-heading font-bold text-foreground">
@@ -32,7 +32,7 @@ const AboutSection = () => {
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
           transition={{ duration: 0.6, delay: 0.1 }}
-          className="flex flex-col lg:flex-row items-center gap-10 mb-20"
+          className="flex flex-col lg:flex-row items-center gap-10 mb-10 md:mb-20"
         >
           <div className="relative flex-shrink-0">
             <div className="w-64 h-80 md:w-72 md:h-96 rounded-2xl overflow-hidden border-4 border-primary/20 shadow-2xl shadow-primary/10">

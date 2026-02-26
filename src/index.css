@@ -5,6 +5,10 @@
 @tailwind utilities;
 
 @layer base {
+  html {
+    scroll-padding-top: 68px;
+  }
+
   :root {
     /* Orange + Blue Theme – Light Mode */
     --background: 220 30% 97%;
@@ -125,7 +129,7 @@
   }
 
   .section-padding {
-    @apply py-20 md:py-28 px-4 md:px-8;
+    @apply py-10 md:py-28 px-4 md:px-8;
   }
 
   .glass {
