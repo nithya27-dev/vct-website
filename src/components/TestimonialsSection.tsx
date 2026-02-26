@@ -65,7 +65,7 @@ const TestimonialsSection = () => {
   }, [isPaused, current]);
 
   return (
-    <section id="testimonials" className="py-8 sm:py-24 bg-background">
+    <section id="testimonials" className="py-8 sm:py-14 bg-background">
       <div className="section-container">
         <div className="max-w-4xl mx-auto">
           <div className="bg-white/90 dark:bg-zinc-900/80 rounded-2xl shadow-xl border border-border p-4 sm:p-10">

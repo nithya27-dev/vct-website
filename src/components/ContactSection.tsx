@@ -3,7 +3,7 @@ import { Phone, Mail, MapPin } from "lucide-react";
 
 const ContactSection = () => {
   return (
-    <section id="contact" className="py-8 md:py-20 bg-section-alt">
+    <section id="contact" className="py-8 md:py-14 bg-section-alt">
       <div className="container mx-auto px-4">
 
         {/* Heading */}

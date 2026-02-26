@@ -14,7 +14,7 @@ const logos = [
 ];
 
 const PlacementLogos = () => (
-  <section className="py-12 bg-background overflow-hidden">
+  <section className="py-8 bg-background overflow-hidden">
     <div className="section-container mb-6">
       <p className="text-center text-black/70 text-sm font-medium uppercase tracking-widest">
         Top Companies Where Our Students Are Placed
