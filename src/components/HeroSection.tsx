@@ -14,6 +14,9 @@ const stats = [
 const FORM_LINK =
   "https://docs.google.com/forms/d/e/1FAIpQLSeasmTZ3wOn0aMDz-A6fFGVKu-U2rac4qPAdkAaPrclJj7z3w/viewform";
 
+const DEMO_LINK =
+  "https://us06web.zoom.us/meeting/register/eZQMjATjT7aDPLL_4imTHA";
+
 const HeroSection = () => {
   const scrollTo = (id: string) =>
     document.getElementById(id)?.scrollIntoView({ behavior: "smooth" });
@@ -117,6 +120,30 @@ const HeroSection = () => {
           >
             Enroll Now
             <ArrowRight className="w-4 h-4" />
+          </a>
+
+          {/* Book a Free Demo — blue outlined */}
+          <a
+            href={DEMO_LINK}
+            target="_blank"
+            rel="noopener noreferrer"
+            className="inline-flex items-center gap-2 font-semibold text-base rounded-lg px-8 py-3.5 transition-all duration-200 hover:brightness-110 hover:scale-[1.02]"
+            style={{
+              background: "linear-gradient(135deg, #1d4ed8 0%, #3b82f6 100%)",
+              boxShadow: "0 4px 24px rgba(59,130,246,0.40)",
+              color: "#ffffff",
+            }}
+          >
+            {/* Play icon */}
+            <svg
+              viewBox="0 0 24 24"
+              className="w-4 h-4"
+              fill="currentColor"
+              xmlns="http://www.w3.org/2000/svg"
+            >
+              <path d="M8 5v14l11-7z" />
+            </svg>
+            Book a Free Demo
           </a>
 
           {/* WhatsApp Us — dark outlined */}

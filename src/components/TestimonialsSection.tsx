@@ -9,14 +9,24 @@ const testimonials = [
     text: "The training was very practical and industry-oriented. The trainer explains concepts from basics to advanced level in a clear and structured way. The real-time projects helped me understand how companies work with data pipelines. They also provide interview preparation support, resume building guidance, and mock interviews which helped me gain confidence."
   },
   {
-    name: "Christopher Balla",
+    name: "Sathwik Yarraganti",
     role: "GCP Data Engineering Student",
-    text: "A good education can change anyone. A good teacher can change everything! Vaarahi Cloud Technologies offers structured learning and hands-on practice."
+    text: "I want to share my experience with vaarahi cloud technologies.I tried so many institutes before joining in Vaarahi. Here I learned many new technologies like bigdata,Hadoop, pyspark,airflow,gcs, bigquery,dataproc,dataflow,cloud composer and also basic of AWS,AZURE along with GitHub,jira. Here I liked to learn this technologies along with experienced persons, this helps me to how we behave in corporate offices. Lastly I loved the tag line of this institute, that is 'ONE INSTITUTE ONE COURSE', this words are pulled me to join in VAARAHI CLOUD TECHNOLOGIES.Thank you SATISH sir, for giving this wonderful platform."
   },
   {
-    name: "Krishna",
+    name: "venkata padmasai Arava",
     role: "GCP Data Engineering Student",
-    text: "I had an excellent learning experience. The course is structured and practical with real-world case studies."
+    text: "I joined vaarahi cloud technologys with very little knowledge about gcp data engineer.under the guidence of satish sir,I was able to build a strong foundation in google cloud data engineering concepts.the training was very structured,pratical and focused on real-time scenarios.The hands on sessions and interview -oriented guidance helped me gain confidence and improve my technical skills significantly.Based on my personal experience,i highly recommend vaarahi cloud technologys to anyone looking to build a career in gcp data engineer.it is on of the best institute for gaining both practical knowledge and career guidance in this field"
+  },
+  {
+    name: "Vamshi Krishna",
+    role: "GCP Data Engineering Student",
+    text: "I had an amazing experience with Vaarahi Cloud Technologies.This is the one and only Institute provides that GCP Data Engineer course. I have researched many institutions regarding this course but I have found the great place to learn and upskill myself.The trainer Sathish Panthula sir with 20+ years of experience in the IT industry with a great teaching skills. Sir explained the end to end pipeline very clearly.The explanation is simply superb.The concepts that explained in a simple and easy to understandable manner.The staff is very friendly especially Ravi anna helped me a lot.The course helped me to improve my skills, and build confidence.The great place for who are looking for upskill and looking for future growth."
+  },
+  {
+    name: "Siva Sai",
+    role: "GCP Data Engineering Student",
+    text: "I recently finished my course at Vaarahi Cloud Technology, and honestly, it was a great experience. I come from a non-IT background, so in the beginning I was really scared and unsure if I could survive in the IT field.But after joining Vaarahi, Satish sir gave me so much confidence and proper guidance that all my fear slowly went away in just three months. The staff at the institute were also very supportive whenever I needed help.One thing I really liked in Satish sir’s way of teaching and he gives suggestions and motivates you in such a way that even if you feel you can’t do something, he makes you believe that you actually can. That really helped me a lot.Overall, I feel Vaarahi is one of the best institutes, especially for non-IT people who want to build a career as GCP Data Engineers."
   }
 ];
 
@@ -45,11 +55,10 @@ const TestimonialsSection = () => {
     ]);
   };
 
-  // ✅ Auto Slide
   useEffect(() => {
     const interval = setInterval(() => {
       paginate(1);
-    }, 4000);
+    }, 6000);
 
     return () => clearInterval(interval);
   }, []);
