@@ -47,6 +47,7 @@ const slideVariants = {
 
 const TestimonialsSection = () => {
   const [[current, direction], setCurrent] = useState<[number, number]>([0, 0]);
+  const [isPaused, setIsPaused] = useState(false);
 
   const paginate = (newDirection: number) => {
     setCurrent(([prev]) => [
@@ -56,12 +57,12 @@ const TestimonialsSection = () => {
   };
 
   useEffect(() => {
+    if (isPaused) return;
     const interval = setInterval(() => {
       paginate(1);
     }, 6000);
-
     return () => clearInterval(interval);
-  }, []);
+  }, [isPaused, current]);
 
   return (
     <section id="testimonials" className="py-12 sm:py-24 bg-background">
@@ -78,7 +79,13 @@ const TestimonialsSection = () => {
               </h2>
             </div>
 
-            <div className="relative max-w-3xl mx-auto overflow-hidden">
+            <div
+              className="relative max-w-3xl mx-auto overflow-hidden"
+              onMouseEnter={() => setIsPaused(true)}
+              onMouseLeave={() => setIsPaused(false)}
+              onTouchStart={() => setIsPaused(true)}
+              onTouchEnd={() => setIsPaused(false)}
+            >
               <div className="glass-card p-5 sm:p-10 relative">
 
                 <Quote className="w-8 h-8 sm:w-12 sm:h-12 text-primary/20 absolute top-6 left-6" />

@@ -62,32 +62,50 @@ const HeroSection = () => {
 
 
         {/* ── Headline ── */}
-        <motion.h1
+        <motion.div
           initial={{ opacity: 0, y: 28 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.7, delay: 0.1 }}
-          className="font-heading font-bold leading-[1.08] mb-6"
-          style={{ fontSize: "clamp(2.8rem, 5.5vw, 4.8rem)" }}
+          className="flex flex-col items-center text-center mb-6 gap-2"
         >
+          {/* Vaarahi Cloud Technologies */}
           <motion.p
             initial={{ opacity: 0, y: 10 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.5 }}
-            className="font-bold text-lg md:text-2xl tracking-widest uppercase mb-4 inline-block"
+            className="font-bold text-base md:text-xl tracking-widest uppercase"
             style={{
               background: "linear-gradient(135deg, #ea580c 0%, #fb923c 100%)",
               WebkitBackgroundClip: "text",
               WebkitTextFillColor: "transparent",
             }}
           >
-            One Institute · One Course
+            Vaarahi Cloud Technologies
           </motion.p>
-          <br />
-          {/* Line 1 */}
-          <span style={{ color: "#ffffff" }}>VAARAHI CLOUD&nbsp;</span>
-          <br />
-          <span style={{ color: "#eeeae7ff" }}>TECHNOLOGIES</span>
-        </motion.h1>
+
+          {/* ONE INSTITUTE · ONE COURSE */}
+          <div
+            className="font-heading font-bold leading-tight"
+            style={{ color: "#ffffff", fontSize: "clamp(2.4rem, 4.8vw, 4rem)", letterSpacing: "0.10em" }}
+          >
+            {/* Desktop: one line */}
+            <span className="hidden md:block whitespace-nowrap">ONE INSTITUTE · ONE COURSE</span>
+            {/* Mobile: two stacked lines */}
+            <span className="flex flex-col items-center md:hidden">
+              <span>ONE INSTITUTE</span>
+              <span>ONE COURSE</span>
+            </span>
+          </div>
+
+          {/* GCP Data Engineer */}
+          <p
+            className="font-medium tracking-widest"
+            style={{ color: "rgba(255,255,255,0.70)", fontSize: "clamp(1rem, 2vw, 1.4rem)", letterSpacing: "0.08em" }}
+          >
+            GCP Data Engineer
+          </p>
+        </motion.div>
+
 
         {/* ── Subheading ── */}
         <motion.p
@@ -143,7 +161,7 @@ const HeroSection = () => {
             >
               <path d="M8 5v14l11-7z" />
             </svg>
-            Book a Free Demo
+            Book Demo for 28th
           </a>
 
           {/* WhatsApp Us — dark outlined */}
