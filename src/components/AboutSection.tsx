@@ -1,6 +1,6 @@
 import { motion } from "framer-motion";
 import { Target, Rocket, Star, Trophy } from "lucide-react";
-import founderImg from "@/assets/founder.jpg";
+import satishsir from "@/assets/satishsir.jpg";
 
 const highlights = [
   { icon: Target, title: "Our Purpose", text: "Empower learners with expert-driven training in GCP & Cloud Data Engineering, combining deep academic concepts with real-time practical implementation." },
@@ -37,7 +37,7 @@ const AboutSection = () => {
           <div className="relative flex-shrink-0">
             <div className="w-64 h-80 md:w-72 md:h-96 rounded-2xl overflow-hidden border-4 border-primary/20 shadow-2xl shadow-primary/10">
               <img
-                src={founderImg}
+                src={satishsir}
                 alt="Satish Pantula - Founder & Lead Trainer"
                 className="w-full h-full object-cover object-top"
               />
