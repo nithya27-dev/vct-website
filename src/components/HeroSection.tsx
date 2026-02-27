@@ -6,7 +6,7 @@ const stats = [
   { value: "840+", label: "Students Placed" },
   { value: "47+", label: "Batches Completed" },
   { value: "79%", label: "Success Rate" },
-  { value: "21+", label: "IT Experience" },
+  { value: "20+", label: "IT Experience" },
   { value: "12+", label: "Teaching Experience" },
 
 ];

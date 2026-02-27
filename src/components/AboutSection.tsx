@@ -51,7 +51,7 @@ const AboutSection = () => {
             <h3 className="text-2xl md:text-3xl font-heading font-bold text-foreground mb-2">
               Satish Pantula
             </h3>
-            <p className="text-primary font-semibold mb-4">Founder & Lead Trainer</p>
+            <p className="text-primary font-semibold mb-4">Founder & Lead Mentor</p>
             <blockquote className="text-muted-foreground text-base md:text-lg leading-relaxed italic border-l-4 border-primary pl-6">
               "At Vaarahi, we don't just teach tools — we shape careers. Our one-course-one-focus model ensures every student receives deep, practical knowledge to become a job-ready GCP Data Engineer. With a blend of real-time projects, mentorship, and placement support, we've helped over 800+ students step confidently into the IT world."
             </blockquote>

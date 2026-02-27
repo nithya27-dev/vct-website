@@ -15,8 +15,15 @@ const logos = [
 
 const PlacementLogos = () => (
   <section className="py-8 bg-background overflow-hidden">
-    <div className="section-container mb-6">
-      <p className="text-center text-black/70 text-sm font-medium uppercase tracking-widest">
+    <div className="section-container mb-6 flex justify-center">
+      <p
+        className="text-center text-sm font-semibold uppercase tracking-widest px-6 py-2 rounded-lg"
+        style={{
+          color: "#ff6a00",
+          border: "1.5px solid rgba(255, 106, 0, 0.35)",
+          background: "rgba(255, 106, 0, 0.05)",
+        }}
+      >
         Top Companies Where Our Students Are Placed
       </p>
     </div>
