@@ -3,7 +3,7 @@ import { motion, AnimatePresence } from "framer-motion";
 import { X, Send, CheckCircle, AlertCircle, Loader2 } from "lucide-react";
 
 const APPS_SCRIPT_URL =
-  "https://script.google.com/macros/s/AKfycbwV-HMhTMCyL6LyA0gTHG20jp1MC0kmmiHxeyKB_29C7F-5WX8SE-2hMdIZ5eLIjfpRjQ/exec";
+  "https://script.google.com/macros/s/AKfycbxzvgmLqgRLO-jHsGpxFFwhA3QyUkIxzQFs9weRD8k_eOwAGi5png7_S0h_jwJEckh6OQ/exec";
 
 type Status = "idle" | "loading" | "success" | "error";
 
