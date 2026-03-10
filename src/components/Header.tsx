@@ -11,6 +11,8 @@ const navItems = [
   "Contact",
 ];
 
+const GRAPHY_LINK = "https://courses.vaarahicloudtechnologies.com/";
+
 const FORM_LINK =
   "https://docs.google.com/forms/d/e/1FAIpQLSeasmTZ3wOn0aMDz-A6fFGVKu-U2rac4qPAdkAaPrclJj7z3w/viewform";
 
@@ -91,6 +93,16 @@ const Header = () => {
                 )}
               </button>
             ))}
+
+            {/* Courses – external link */}
+            <a
+              href={GRAPHY_LINK}
+              target="_blank"
+              rel="noopener noreferrer"
+              className="text-sm font-medium text-muted-foreground hover:text-primary transition-colors"
+            >
+              Courses
+            </a>
 
             <a
               href="tel:+917893337796"
@@ -215,6 +227,17 @@ const Header = () => {
                     {item}
                   </a>
                 ))}
+
+                {/* Courses – external link (mobile) */}
+                <a
+                  href={GRAPHY_LINK}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  onClick={() => setIsOpen(false)}
+                  className="text-sm font-medium text-muted-foreground hover:text-primary py-2"
+                >
+                  Courses
+                </a>
 
                 <a
                   href="tel:+917893337796"

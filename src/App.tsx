@@ -7,13 +7,15 @@ import TestimonialsSection from "@/components/TestimonialsSection";
 import GallerySection from "@/components/GallerySection";
 import ContactSection from "@/components/ContactSection";
 import Footer from "@/components/Footer";
+import EnquiryPopup from "@/components/EnquiryPopup";
 
 const Index = () => {
   return (
     <>
+      <EnquiryPopup />
       <Header />
       <HeroSection />
-      <PlacementLogos/>
+      <PlacementLogos />
       <AboutSection />
       <ServicesSection />
       <TestimonialsSection />

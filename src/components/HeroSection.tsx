@@ -15,7 +15,7 @@ const FORM_LINK =
   "https://docs.google.com/forms/d/e/1FAIpQLSeasmTZ3wOn0aMDz-A6fFGVKu-U2rac4qPAdkAaPrclJj7z3w/viewform";
 
 const DEMO_LINK =
-  "https://us06web.zoom.us/meeting/register/eZQMjATjT7aDPLL_4imTHA";
+  "https://us06web.zoom.us/meeting/register/ppKrjS4qTgaftwZX5j7kkw";
 
 const HeroSection = () => {
   const scrollTo = (id: string) => {
