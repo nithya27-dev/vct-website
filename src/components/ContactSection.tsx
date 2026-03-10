@@ -48,9 +48,12 @@ const ContactSection = () => {
                   </div>
                   <div>
                     <p className="text-xs text-muted-foreground">Phone / WhatsApp</p>
-                    <p className="font-semibold text-foreground">
+                    <a
+                      href="tel:+917893337796"
+                      className="font-semibold text-foreground hover:text-primary transition-colors"
+                    >
                       +91 7893337796
-                    </p>
+                    </a>
                   </div>
                 </div>
 
@@ -60,9 +63,12 @@ const ContactSection = () => {
                   </div>
                   <div className="min-w-0">
                     <p className="text-xs text-muted-foreground">Email</p>
-                    <p className="font-semibold text-foreground break-all">
+                    <a
+                      href="mailto:training@vaarahicloudtechnologies.com"
+                      className="font-semibold text-foreground break-all hover:text-primary transition-colors"
+                    >
                       training@vaarahicloudtechnologies.com
-                    </p>
+                    </a>
                   </div>
                 </div>
 
