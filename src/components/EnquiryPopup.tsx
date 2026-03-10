@@ -20,11 +20,8 @@ const EnquiryPopup = () => {
   });
 
   useEffect(() => {
-    const seen = sessionStorage.getItem("enquiry_popup_seen");
-    if (!seen) {
-      const timer = setTimeout(() => setIsOpen(true), 800);
-      return () => clearTimeout(timer);
-    }
+    const timer = setTimeout(() => setIsOpen(true), 800);
+    return () => clearTimeout(timer);
   }, []);
 
   useEffect(() => {
@@ -35,7 +32,6 @@ const EnquiryPopup = () => {
 
   const handleClose = () => {
     setIsOpen(false);
-    sessionStorage.setItem("enquiry_popup_seen", "true");
   };
 
   const handleChange = (
